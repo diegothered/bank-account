@@ -6,20 +6,42 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.js" charset="utf-8"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
-    <title>igPay atinLay!</title>
+    <title>Bank Account</title>
   </head>
   <body>
     <div class="container">
-      <form id="user" action="index.html" method="post">
-        <label for="input">Type your English word here:</label>
-        <input type="text" id="entry" class="form-control">
-        <button type="submit" name="button">ubmitSay!</button>
-
+      <form id="openAcct">
+        <div class="form-group">
+          <h2>Open an account: </h2>
+          <label for="name">Name</label>
+          <input type="text" id="name" class="form-control">
+          <label for="initialDeposit">Initial Deposit</label>
+          <input type="text" id="initialDeposit" class="form-control">
+        </div>
+        <button type="submit" name="button">Submit to create account</button>
       </form>
-      <div class="results">
-        <p>Your word in Pig Latin: <span class="outcome"></span></p>
 
+      <form id="existingAcct">
+        <div class="form-group">
+          <h2>Deposit or withdraw funds: </h2>
+          <label for="deposit">Deposit Amount: </label>
+          <input type="text" id="deposit" class="form-control">
+          <label for="withdrawal">Withdrawal Amount: </label>
+          <input type="text" id="withdrawal" class="form-control">
+        </div>
+        <button type="submit" name="button">Deposit or withdraw</button>
+      </form>
+
+      <div class="showInitialBalance">
+        <!-- <h2>Initial Balance: </h2>
+        <p><span id="account-holder"></span>, your account balance is: <span id="initial-balance"></span></p> -->
       </div>
+
+      <!-- <div class="showRunningBalance">
+        <h2>Current Balance: </h2>
+        <p><span id="account-holder"></span>, your current account balance is: <span id="current-balance"></span></p>
+      </div> -->
+
 
     </div>
   </body>
